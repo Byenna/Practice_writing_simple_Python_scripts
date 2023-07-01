@@ -1,31 +1,40 @@
 # Practice_writing_simple_Python_scripts
 A few hands-on Scripts to help you practice writing simple Python scripts
 
-**Check the README.md of the specific branch for guidance**
+# A step by step guide on how to...
 
-Script 1: User Input
-Write a script that asks the user to enter their name and then prints a greeting message with their name.
+**4 ...Write a script that asks the user to enter a series of numbers (separated by commas) and calculates the sum of those numbers. And prints the sum to the console.**
 
-Script 2: Temperature Conversion
-Write a script that asks the user to enter a temperature in Celsius and converts it to Fahrenheit. The conversion formula is: F = (C * 9/5) + 32, where F is the temperature in Fahrenheit and C is the temperature in Celsius.
 
-Script 3: Even or Odd
-Write a script that asks the user to enter an integer and then determines whether the number is even or odd. Print an appropriate message to the console.
+Step 1: Prompt the user for input
+Use the input() function to ask the user to enter a series of numbers separated by commas. Store the user input in a variable, let's call it "numbers_input".
 
-Script 4: Sum of Numbers
-Write a script that asks the user to enter a series of numbers (separated by commas) and calculates the sum of those numbers. Print the sum to the console.
+Step 2: Split the input into a list of numbers
+Use the split() function to split "numbers_input" into a list of individual numbers. Pass "," as the argument to split() to separate the numbers based on the commas. Assign the resulting list to a variable, let's call it "numbers_list".
 
-Script 5: Reverse a String
-Write a script that asks the user to enter a string and then prints the reverse of that string.
+Step 3: Convert the list of numbers to integers
+Loop through each number in "numbers_list" and convert them to integers using the int() function. Replace the original string values in "numbers_list" with the converted integers.
 
-Script 6: Factorial
-Write a script that asks the user to enter an integer and calculates its factorial. The factorial of a non-negative integer n is the product of all positive integers less than or equal to n. Print the factorial to the console.
+Step 4: Calculate the sum of the numbers
+Use the sum() function to calculate the sum of all the numbers in "numbers_list". Assign the sum to a variable, let's call it "sum_of_numbers".
 
-Script 7: Fibonacci Sequence
-Write a script that asks the user to enter the number of terms they want in the Fibonacci sequence and then prints the sequence. The Fibonacci sequence is a series of numbers in which each number is the sum of the two preceding ones. The sequence starts with 0 and 1.
+Step 5: Print the result
+Use the print() function to display the sum of the numbers to the console.
+Here's the complete script:
 
-Script 8: Prime Numbers
-Write a script that asks the user to enter an integer and determines whether it is a prime number. A prime number is a natural number greater than 1 that is divisible only by 1 and itself. Print an appropriate message to the console.
 
-Script 9: File Reader
-Write a script that reads a text file (you can create a sample text file with some content) and prints its contents to the console.
+# Step 1: Prompt the user for input
+numbers_input = input("Enter a series of numbers separated by commas: ")
+
+# Step 2: Split the input into a list of numbers
+numbers_list = numbers_input.split(",")
+
+# Step 3: Convert the list of numbers to integers
+for i in range(len(numbers_list)):
+    numbers_list[i] = int(numbers_list[i])
+
+# Step 4: Calculate the sum of the numbers
+sum_of_numbers = sum(numbers_list)
+
+# Step 5: Print the result
+print("The sum of the numbers is:", sum_of_numbers)
