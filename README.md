@@ -1,31 +1,50 @@
 # Practice_writing_simple_Python_scripts
 A few hands-on Scripts to help you practice writing simple Python scripts
 
-**Check the README.md of the specific branch for guidance**
+# A step by step guide on how to...
 
-Script 1: User Input
-Write a script that asks the user to enter their name and then prints a greeting message with their name.
+**8 ...write a script that asks the user to enter an integer and determines whether it is a prime number. A prime number is a natural number greater than 1 that is divisible only by 1 and itself. Print an appropriate message to the console.**
 
-Script 2: Temperature Conversion
-Write a script that asks the user to enter a temperature in Celsius and converts it to Fahrenheit. The conversion formula is: F = (C * 9/5) + 32, where F is the temperature in Fahrenheit and C is the temperature in Celsius.
 
-Script 3: Even or Odd
-Write a script that asks the user to enter an integer and then determines whether the number is even or odd. Print an appropriate message to the console.
+Step 1: Prompt the user for input
 
-Script 4: Sum of Numbers
-Write a script that asks the user to enter a series of numbers (separated by commas) and calculates the sum of those numbers. Print the sum to the console.
+import math
 
-Script 5: Reverse a String
-Write a script that asks the user to enter a string and then prints the reverse of that string.
+Use the input() function to ask the user to enter an integer. Store the user input in a variable, let's call it "number".
 
-Script 6: Factorial
-Write a script that asks the user to enter an integer and calculates its factorial. The factorial of a non-negative integer n is the product of all positive integers less than or equal to n. Print the factorial to the console.
+Step 2: Convert the input to an integer
+Since the input() function returns user input as a string, we need to convert "number" to an integer using the int() function. Assign the converted integer back to the "number" variable.
 
-Script 7: Fibonacci Sequence
-Write a script that asks the user to enter the number of terms they want in the Fibonacci sequence and then prints the sequence. The Fibonacci sequence is a series of numbers in which each number is the sum of the two preceding ones. The sequence starts with 0 and 1.
+Step 3: Check if the number is prime
+To determine if a number is prime, we can use a simple loop. Iterate through each number from 2 to the square root of "number" (inclusive). Check if "number" is divisible evenly by any number in the loop. If it is, the number is not prime; otherwise, it is prime.
 
-Script 8: Prime Numbers
-Write a script that asks the user to enter an integer and determines whether it is a prime number. A prime number is a natural number greater than 1 that is divisible only by 1 and itself. Print an appropriate message to the console.
+Step 4: Print the result
+Use the print() function to display an appropriate message to the console based on whether the number is prime or not.
+Here's the complete script:
 
-Script 9: File Reader
-Write a script that reads a text file (you can create a sample text file with some content) and prints its contents to the console.
+import math
+
+# Step 1: Prompt the user for input
+number = input("Enter an integer: ")
+
+# Step 2: Convert the input to an integer
+number = int(number)
+
+# Step 3: Check if the number is prime
+is_prime = True
+if number < 2:
+    is_prime = False
+else:
+    for i in range(2, int(math.sqrt(number)) + 1):
+        if number % i == 0:
+            is_prime = False
+            break
+
+# Step 4: Print the result
+if is_prime:
+    print(number, "is a prime number.")
+else:
+    print(number, "is not a prime number.")
+
+    
+That's it! The script will prompt the user for an integer, determine if it is a prime number or not, and inform the user with an appropriate message. Let me know if you have any further questions.
