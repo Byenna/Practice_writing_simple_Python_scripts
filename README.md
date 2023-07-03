@@ -11,6 +11,7 @@ Use the 'input()' function to get the user's input. Display a prompt message ask
 `celsius = float(input("Please enter the temperature in Celsius: "))`
 
 The `float()` function is used to convert the user's input into a floating-point number.
+
 Step 2: Convert the temperature to Fahrenheit
 Apply the conversion formula, `F = (C * 9/5) + 32`, where `F` is the temperature in Fahrenheit and `C` is the temperature in Celsius. Calculate the temperature in Fahrenheit and store it in a variable called `fahrenheit`:
 
